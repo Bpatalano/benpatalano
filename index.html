@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>Ben Patalano — Senior Software Engineer | San Francisco</title>
+  <meta name="description" content="Senior Software Engineer with 8+ years building high-scale consumer and B2B products at Discord, Amplitude, Volley Games, and more. Based in San Francisco.">
+  <meta name="keywords" content="Ben Patalano, Senior Software Engineer, San Francisco, Discord, Amplitude, Volley Games, React, TypeScript, Python, Rust, Full Stack Engineer">
+  <meta name="author" content="Ben Patalano">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://benpatalano.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ben Patalano — Senior Software Engineer">
+  <meta property="og:description" content="8+ years building high-scale consumer and B2B products at Discord, Amplitude, Volley Games, and more.">
+  <meta property="og:url" content="https://benpatalano.com/">
+  <meta property="og:site_name" content="Ben Patalano">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Ben Patalano — Senior Software Engineer">
+  <meta name="twitter:description" content="8+ years building high-scale consumer and B2B products at Discord, Amplitude, Volley Games, and more.">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ben Patalano",
+    "jobTitle": "Senior Software Engineer",
+    "url": "https://benpatalano.com",
+    "email": "Ben.Patalano@gmail.com",
+    "telephone": "+19518018905",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "San Francisco",
+      "addressRegion": "CA",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://linkedin.com/in/bpatalano",
+      "https://github.com/Bpatalano"
+    ],
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "University of California, Santa Barbara"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "name": "Hack Reactor"
+      }
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Available for opportunities"
+    },
+    "knowsAbout": ["TypeScript", "JavaScript", "Python", "Rust", "React", "Node.js", "GraphQL", "Flask", "A/B Testing"]
+  }
+  </script>
+
+  <!-- Favicon (inline SVG) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%236e56cf'/><text x='50' y='74' text-anchor='middle' font-family='Georgia,serif' font-size='60' fill='white'>B</text></svg>">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* ═══════════════════════════════════════════════ */
+    /*  VARIABLES & RESET                              */
+    /* ═══════════════════════════════════════════════ */
+    :root {
+      --bg:        #0c0c0f;
+      --bg-card:   #141419;
+      --bg-hover:  #1a1a22;
+      --border:    #252530;
+      --text:      #e0dfe6;
+      --text-dim:  #8a8997;
+      --accent:    #6e56cf;
+      --accent-2:  #3b82f6;
+      --accent-3:  #22c55e;
+      --glow:      rgba(110, 86, 207, .12);
+      --serif:     'DM Serif Display', Georgia, serif;
+      --sans:      'IBM Plex Sans', system-ui, sans-serif;
+      --mono:      'JetBrains Mono', 'SF Mono', monospace;
+      --max-w:     820px;
+      --radius:    10px;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--text);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-decoration: none; transition: color .2s; }
+    a:hover { color: var(--accent-2); }
+
+    ::selection { background: var(--accent); color: #fff; }
+
+    /* ═══════════════════════════════════════════════ */
+    /*  GRAIN OVERLAY                                  */
+    /* ═══════════════════════════════════════════════ */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: .025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 180px;
+    }
+
+    /* ═══════════════════════════════════════════════ */
+    /*  LAYOUT                                         */
+    /* ═══════════════════════════════════════════════ */
+    .page {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 3rem 1.5rem 6rem;
+    }
+
+    /* ═══════════════════════════════════════════════ */
+    /*  NAV / TOP BAR                                  */
+    /* ═══════════════════════════════════════════════ */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .top-bar__logo {
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-dim);
+      letter-spacing: .5px;
+    }
+    .top-bar__links { display: flex; gap: 1.25rem; align-items: center; }
+    .top-bar__links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-dim);
+      transition: color .2s;
+    }
+    .top-bar__links a:hover { color: var(--text); }
+    .top-bar__links svg { width: 16px; height: 16px; fill: currentColor; }
+
+    /* ═══════════════════════════════════════════════ */
+    /*  HERO                                           */
+    /* ═══════════════════════════════════════════════ */
+    .hero { margin-bottom: 3.5rem; }
+    .hero__name {
+      font-family: var(--serif);
+      font-size: clamp(2.4rem, 5.5vw, 3.6rem);
+      font-weight: 400;
+      color: #fff;
+      line-height: 1.15;
+      letter-spacing: -.02em;
+    }
+    .hero__title {
+      font-family: var(--mono);
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--accent);
+      margin-top: .6rem;
+      letter-spacing: .3px;
+    }
+    .hero__summary {
+      margin-top: 1.25rem;
+      max-width: 620px;
+      color: var(--text-dim);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+    .hero__contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+      margin-top: 1.5rem;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 500;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      color: var(--text-dim);
+      transition: all .2s;
+    }
+    .pill:hover {
+      border-color: var(--accent);
+      color: var(--text);
+      background: var(--glow);
+    }
+    .pill svg { width: 14px; height: 14px; fill: currentColor; flex-shrink: 0; }
+    .pill--download {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--glow);
+    }
+    .pill--download:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    /* ═══════════════════════════════════════════════ */
+    /*  SECTION HEADINGS                               */
+    /* ═══════════════════════════════════════════════ */
+    .section { margin-bottom: 3rem; }
+    .section__heading {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      padding-bottom: .6rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ═══════════════════════════════════════════════ */
+    /*  SKILLS / TAGS                                  */
+    /* ═══════════════════════════════════════════════ */
+    .skill-group { margin-bottom: 1rem; }
+    .skill-group__label {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-dim);
+      margin-bottom: .5rem;
+    }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      font-family: var(--mono);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text);
+      transition: all .2s;
+    }
+    .tag:hover {
+      border-color: var(--accent);
+      box-shadow: 0 0 12px var(--glow);
+    }
+
+    /* ═══════════════════════════════════════════════ */
+    /*  EXPERIENCE CARDS                               */
+    /* ═══════════════════════════════════════════════ */
+    .job {
+      position: relative;
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      transition: border-color .25s, box-shadow .25s;
+    }
+    .job:hover {
+      border-color: #333;
+      box-shadow: 0 4px 24px rgba(0,0,0,.3);
+    }
+    .job__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: .25rem .75rem;
+      margin-bottom: .5rem;
+    }
+    .job__company {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      color: #fff;
+    }
+    .job__company a { color: #fff; }
+    .job__company a:hover { color: var(--accent); }
+    .job__dates {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--text-dim);
+      white-space: nowrap;
+    }
+    .job__role {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--accent);
+      margin-bottom: .75rem;
+    }
+    .job__desc {
+      font-size: 14px;
+      color: var(--text-dim);
+      margin-bottom: .75rem;
+      line-height: 1.65;
+    }
+    .job__bullets { list-style: none; }
+    .job__bullets li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: .5rem;
+      font-size: 14px;
+      color: var(--text-dim);
+      line-height: 1.6;
+    }
+    .job__bullets li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 13px;
+    }
+
+    /* Project badges within experience */
+    .job__projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: .75rem;
+    }
+    .project-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      font-family: var(--mono);
+      background: rgba(110, 86, 207, .08);
+      border: 1px solid rgba(110, 86, 207, .25);
+      color: var(--accent);
+      transition: all .2s;
+    }
+    .project-badge:hover {
+      background: rgba(110, 86, 207, .18);
+      border-color: var(--accent);
+      color: #fff;
+    }
+    .project-badge svg { width: 12px; height: 12px; fill: currentColor; }
+
+    /* ═══════════════════════════════════════════════ */
+    /*  EDUCATION                                      */
+    /* ═══════════════════════════════════════════════ */
+    .edu {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: .25rem .75rem;
+      padding: .75rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .edu:last-child { border-bottom: none; }
+    .edu__school { font-weight: 500; color: #fff; font-size: 15px; }
+    .edu__detail {
+      font-size: 13px;
+      color: var(--text-dim);
+    }
+    .edu__dates {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--text-dim);
+    }
+
+    /* ═══════════════════════════════════════════════ */
+    /*  FOOTER                                         */
+    /* ═══════════════════════════════════════════════ */
+    .footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+    .footer__text {
+      font-size: 13px;
+      color: var(--text-dim);
+    }
+
+    /* ═══════════════════════════════════════════════ */
+    /*  ANIMATIONS                                     */
+    /* ═══════════════════════════════════════════════ */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .hero       { animation: fadeUp .6s ease both; }
+    .section:nth-of-type(1) { animation: fadeUp .6s .1s ease both; }
+    .section:nth-of-type(2) { animation: fadeUp .6s .2s ease both; }
+    .section:nth-of-type(3) { animation: fadeUp .6s .3s ease both; }
+
+    /* ═══════════════════════════════════════════════ */
+    /*  RESPONSIVE                                     */
+    /* ═══════════════════════════════════════════════ */
+    @media (max-width: 600px) {
+      .page { padding: 1.5rem 1rem 4rem; }
+      .top-bar { flex-direction: column; align-items: flex-start; gap: .75rem; }
+      .job__header { flex-direction: column; }
+      .hero__contact { gap: .5rem; }
+      .pill { font-size: 12px; padding: 5px 11px; }
+      .edu { flex-direction: column; }
+    }
+
+    /* Print styles */
+    @media print {
+      body { background: #fff; color: #111; }
+      body::before { display: none; }
+      .top-bar, .footer { display: none; }
+      .job, .tag, .pill { border-color: #ddd; background: #fff; }
+      .hero__name, .job__company, .job__company a, .edu__school { color: #111; }
+      .hero__title, .job__role, .section__heading, .job__bullets li::before { color: #555; }
+      .hero__summary, .job__desc, .job__bullets li, .edu__detail, .edu__dates, .job__dates { color: #333; }
+      a { color: #111; text-decoration: underline; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- ─── TOP BAR ──────────────────────────────── -->
+    <nav class="top-bar" aria-label="Primary navigation">
+      <div class="top-bar__logo">ben.patalano</div>
+      <div class="top-bar__links">
+        <a href="https://github.com/Bpatalano" target="_blank" rel="noopener" aria-label="GitHub profile">
+          <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          GitHub
+        </a>
+        <a href="https://linkedin.com/in/bpatalano" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+          <svg viewBox="0 0 16 16"><path d="M13.6 0H2.4C1.07 0 0 1.07 0 2.4v11.2C0 14.93 1.07 16 2.4 16h11.2c1.33 0 2.4-1.07 2.4-2.4V2.4C16 1.07 14.93 0 13.6 0zM4.75 13.6H2.4V6h2.35v7.6zM3.58 5.03a1.36 1.36 0 110-2.72 1.36 1.36 0 010 2.72zM13.6 13.6h-2.35V9.92c0-.88-.02-2.01-1.22-2.01-1.23 0-1.42.96-1.42 1.94v3.75H6.26V6h2.26v1.04h.03c.31-.6 1.08-1.22 2.22-1.22 2.38 0 2.82 1.56 2.82 3.6v4.18z"/></svg>
+          LinkedIn
+        </a>
+        <a href="mailto:Ben.Patalano@gmail.com" aria-label="Send email">
+          <svg viewBox="0 0 16 16"><path d="M0 4l8 5 8-5v9a1 1 0 01-1 1H1a1 1 0 01-1-1V4zm0-1.5C0 2.22.22 2 .5 2h15c.28 0 .5.22.5.5L8 7.5 0 2.5z"/></svg>
+          Email
+        </a>
+        <a href="Ben_Patalano_-_Senior_Software_Engineer_-_2025.pdf" download class="pill pill--download" aria-label="Download resume PDF">
+          <svg viewBox="0 0 16 16"><path d="M8 12l-4-4h2.5V2h3v6H12L8 12zm-6 2h12v1.5H2V14z"/></svg>
+          Resume PDF
+        </a>
+      </div>
+    </nav>
+
+    <!-- ─── HERO ─────────────────────────────────── -->
+    <header class="hero">
+      <h1 class="hero__name">Ben Patalano</h1>
+      <p class="hero__title">Senior Software Engineer · San Francisco, CA</p>
+      <p class="hero__summary">
+        8+ years building high-scale consumer and B2B products that delight users at
+        <strong>Discord</strong>, <strong>Amplitude</strong>, <strong>Volley Games</strong>, and more.
+        Product-oriented engineer known for owning ambiguous problem spaces end-to-end,
+        making deliberate tradeoffs, and shipping intentional, metric-moving systems.
+      </p>
+      <div class="hero__contact">
+        <a href="mailto:Ben.Patalano@gmail.com" class="pill">
+          <svg viewBox="0 0 16 16"><path d="M0 4l8 5 8-5v9a1 1 0 01-1 1H1a1 1 0 01-1-1V4zm0-1.5C0 2.22.22 2 .5 2h15c.28 0 .5.22.5.5L8 7.5 0 2.5z"/></svg>
+          Ben.Patalano@gmail.com
+        </a>
+        <span class="pill">
+          <svg viewBox="0 0 16 16"><path d="M3.6 1.5A1.5 1.5 0 015.1 0h.55a1.5 1.5 0 011.45 1.12l.4 1.6a1.5 1.5 0 01-.74 1.63l-.7.4a8.5 8.5 0 004.7 4.7l.4-.7a1.5 1.5 0 011.63-.74l1.6.4A1.5 1.5 0 0116 10.35v.55a1.5 1.5 0 01-1.5 1.5H14a12.5 12.5 0 01-12.5-12.5v-.4z"/></svg>
+          (951) 801-8905
+        </span>
+        <a href="https://linkedin.com/in/bpatalano" target="_blank" rel="noopener" class="pill">
+          <svg viewBox="0 0 16 16"><path d="M13.6 0H2.4C1.07 0 0 1.07 0 2.4v11.2C0 14.93 1.07 16 2.4 16h11.2c1.33 0 2.4-1.07 2.4-2.4V2.4C16 1.07 14.93 0 13.6 0zM4.75 13.6H2.4V6h2.35v7.6zM3.58 5.03a1.36 1.36 0 110-2.72 1.36 1.36 0 010 2.72zM13.6 13.6h-2.35V9.92c0-.88-.02-2.01-1.22-2.01-1.23 0-1.42.96-1.42 1.94v3.75H6.26V6h2.26v1.04h.03c.31-.6 1.08-1.22 2.22-1.22 2.38 0 2.82 1.56 2.82 3.6v4.18z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/Bpatalano" target="_blank" rel="noopener" class="pill">
+          <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </header>
+
+    <!-- ─── TECHNICAL EXPERTISE ──────────────────── -->
+    <section class="section" aria-label="Technical expertise">
+      <h2 class="section__heading">Technical Expertise</h2>
+
+      <div class="skill-group">
+        <div class="skill-group__label">Languages</div>
+        <div class="tags">
+          <span class="tag">TypeScript</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Python</span>
+          <span class="tag">Rust</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group__label">Product Engineering</div>
+        <div class="tags">
+          <span class="tag">React</span>
+          <span class="tag">React Native</span>
+          <span class="tag">Redux</span>
+          <span class="tag">Vite</span>
+          <span class="tag">GraphQL</span>
+          <span class="tag">Experimentation</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group__label">Backend &amp; Systems</div>
+        <div class="tags">
+          <span class="tag">Node.js</span>
+          <span class="tag">Flask</span>
+          <span class="tag">Microservices</span>
+          <span class="tag">Ingestion Pipelines</span>
+          <span class="tag">Caching</span>
+          <span class="tag">Performance Optimization</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group__label">Data &amp; Analytics</div>
+        <div class="tags">
+          <span class="tag">A/B Testing</span>
+          <span class="tag">Event Tracking</span>
+          <span class="tag">Analytics Pipelines</span>
+          <span class="tag">Metric Instrumentation</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group__label">Storage</div>
+        <div class="tags">
+          <span class="tag">SQL</span>
+          <span class="tag">NoSQL</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── EXPERIENCE ───────────────────────────── -->
+    <section class="section" aria-label="Work experience">
+      <h2 class="section__heading">Experience</h2>
+
+      <!-- Volley Games -->
+      <article class="job">
+        <div class="job__header">
+          <h3 class="job__company"><a href="https://www.volleygames.com/" target="_blank" rel="noopener">Volley Games</a></h3>
+          <span class="job__dates">2024 – 2025</span>
+        </div>
+        <div class="job__role">Senior Software Engineer — Hub Team</div>
+        <p class="job__desc">
+          Early engineer on a newly formed team responsible for a multi-device, multi-platform rewrite of the company's TV games platform. Owned foundational systems spanning app performance, experimentation, and analytics.
+        </p>
+        <ul class="job__bullets">
+          <li>Owned technical design and delivery of foundational FireTV application components, defining architecture, rollout strategy, and cross-team interfaces to support long-term experimentation and growth optimization.</li>
+          <li>Led a cross-functional initiative to address app load-time regressions during initial rollout, <strong>reducing startup times by over 60%</strong> and <strong>increasing trial signup conversion by 34%</strong>.</li>
+          <li>Re-architected asset delivery and experimentation flows for the Roku app, enabling non-engineering teams to ship experiments independently without code deployments.</li>
+          <li>Led a multi-quarter effort to revamp a core backend service powering the company's highest-traffic game, mentoring junior engineers and improving reliability, scalability, and content freshness.</li>
+        </ul>
+        <div class="job__projects">
+          <a href="https://www.amazon.com/Volley-Inc-Jeopardy-Games/dp/B0D6F74FQY" target="_blank" rel="noopener" class="project-badge">
+            <svg viewBox="0 0 16 16"><path d="M6.75 1a.75.75 0 01.75.75V4h4.5a.75.75 0 010 1.5h-4.5v2.25a.75.75 0 01-1.5 0V5.5H1.5a.75.75 0 010-1.5H6V1.75A.75.75 0 016.75 1zM3 9.75a.75.75 0 01.75-.75h8.5a.75.75 0 010 1.5h-8.5a.75.75 0 01-.75-.75zm2.25 3a.75.75 0 01.75-.75h4a.75.75 0 010 1.5H6a.75.75 0 01-.75-.75z"/></svg>
+            Volley on Fire TV ↗
+          </a>
+        </div>
+      </article>
+
+      <!-- Amplitude -->
+      <article class="job">
+        <div class="job__header">
+          <h3 class="job__company"><a href="https://amplitude.com/" target="_blank" rel="noopener">Amplitude</a></h3>
+          <span class="job__dates">2023 – 2024</span>
+        </div>
+        <div class="job__role">Senior Software Engineer — Growth</div>
+        <p class="job__desc">
+          Senior product engineer in the Growth organization focused on building out Product Led Growth funnels, metrics, and analytics for new self-service user acquisition and activation initiatives.
+        </p>
+        <ul class="job__bullets">
+          <li>Served as primary engineering partner on onboarding overhaul efforts, supporting experimentation through controlled A/B testing.</li>
+          <li>Owned all technical and architectural decisions for the Shopify PLG expansion, deliberately constraining scope to enable rapid iteration, low operational overhead, and clear success metrics.</li>
+          <li>Designed and shipped a production-ready Shopify application in full-stack TypeScript capable of scaling to all Shopify-originated user sessions.</li>
+          <li>Drove Shopify app's MVP definition, prioritization, and stakeholder communication across Product, Design, and Executive leadership.</li>
+        </ul>
+        <div class="job__projects">
+          <a href="https://apps.shopify.com/amplitude" target="_blank" rel="noopener" class="project-badge">
+            <svg viewBox="0 0 16 16"><path d="M6.75 1a.75.75 0 01.75.75V4h4.5a.75.75 0 010 1.5h-4.5v2.25a.75.75 0 01-1.5 0V5.5H1.5a.75.75 0 010-1.5H6V1.75A.75.75 0 016.75 1zM3 9.75a.75.75 0 01.75-.75h8.5a.75.75 0 010 1.5h-8.5a.75.75 0 01-.75-.75zm2.25 3a.75.75 0 01.75-.75h4a.75.75 0 010 1.5H6a.75.75 0 01-.75-.75z"/></svg>
+            Amplitude on Shopify ↗
+          </a>
+          <a href="https://amplitude.com/integrations/shopify" target="_blank" rel="noopener" class="project-badge">
+            <svg viewBox="0 0 16 16"><path d="M6.75 1a.75.75 0 01.75.75V4h4.5a.75.75 0 010 1.5h-4.5v2.25a.75.75 0 01-1.5 0V5.5H1.5a.75.75 0 010-1.5H6V1.75A.75.75 0 016.75 1zM3 9.75a.75.75 0 01.75-.75h8.5a.75.75 0 010 1.5h-8.5a.75.75 0 01-.75-.75zm2.25 3a.75.75 0 01.75-.75h4a.75.75 0 010 1.5H6a.75.75 0 01-.75-.75z"/></svg>
+            Shopify Integration ↗
+          </a>
+        </div>
+      </article>
+
+      <!-- Discord -->
+      <article class="job">
+        <div class="job__header">
+          <h3 class="job__company"><a href="https://discord.com/" target="_blank" rel="noopener">Discord</a></h3>
+          <span class="job__dates">2021 – 2023</span>
+        </div>
+        <div class="job__role">Senior Software Engineer</div>
+        <p class="job__desc">
+          Autonomous senior engineer owning user engagement initiatives across web, desktop, and mobile surfaces. Notable projects include Discord Quests, Discord U, and Discord Home feeds.
+        </p>
+        <ul class="job__bullets">
+          <li>Designed and shipped full-stack, continuously integrated features serving Discord's global user base.</li>
+          <li>Led short-cycle experimental projects from concept through evaluation, coordinating with Design, Data, and cross-team partners.</li>
+          <li>Built scalable backend API systems in Python using Flask with strong guarantees around performance and reliability.</li>
+          <li>Designed high-throughput data pipelines using Rust and Protocol Buffers to remove analytics bottlenecks.</li>
+          <li>Mentored college interns and new grad hires supporting delivery of production features.</li>
+        </ul>
+        <div class="job__projects">
+          <a href="https://discord.com/ads/quests" target="_blank" rel="noopener" class="project-badge">
+            <svg viewBox="0 0 16 16"><path d="M6.75 1a.75.75 0 01.75.75V4h4.5a.75.75 0 010 1.5h-4.5v2.25a.75.75 0 01-1.5 0V5.5H1.5a.75.75 0 010-1.5H6V1.75A.75.75 0 016.75 1zM3 9.75a.75.75 0 01.75-.75h8.5a.75.75 0 010 1.5h-8.5a.75.75 0 01-.75-.75zm2.25 3a.75.75 0 01.75-.75h4a.75.75 0 010 1.5H6a.75.75 0 01-.75-.75z"/></svg>
+            Discord Quests ↗
+          </a>
+          <a href="https://support.discord.com/hc/en-us/articles/22225719947543-Discord-Quests-FAQ" target="_blank" rel="noopener" class="project-badge">
+            <svg viewBox="0 0 16 16"><path d="M6.75 1a.75.75 0 01.75.75V4h4.5a.75.75 0 010 1.5h-4.5v2.25a.75.75 0 01-1.5 0V5.5H1.5a.75.75 0 010-1.5H6V1.75A.75.75 0 016.75 1zM3 9.75a.75.75 0 01.75-.75h8.5a.75.75 0 010 1.5h-8.5a.75.75 0 01-.75-.75zm2.25 3a.75.75 0 01.75-.75h4a.75.75 0 010 1.5H6a.75.75 0 01-.75-.75z"/></svg>
+            Quests FAQ ↗
+          </a>
+        </div>
+      </article>
+
+      <!-- Scalable Sr -->
+      <article class="job">
+        <div class="job__header">
+          <h3 class="job__company">Scalable</h3>
+          <span class="job__dates">2019 – 2021</span>
+        </div>
+        <div class="job__role">Senior Software Engineer</div>
+        <ul class="job__bullets">
+          <li>Architected and delivered product experiments and features that drove <strong>more than 20% AOV growth</strong> and <strong>over 10% ARPV growth</strong>.</li>
+          <li>Led cross-functional initiatives ranging from two to twelve weeks, establishing clear feedback loops and success metrics.</li>
+          <li>Mentored engineers and helped define growth engineering best practices.</li>
+        </ul>
+      </article>
+
+      <!-- Scalable -->
+      <article class="job">
+        <div class="job__header">
+          <h3 class="job__company">Scalable</h3>
+          <span class="job__dates">2017 – 2019</span>
+        </div>
+        <div class="job__role">Software Engineer</div>
+        <ul class="job__bullets">
+          <li>Built and scaled frontend and backend systems for a two-sided e-commerce marketplace using React, TypeScript, Node.js, and Express.</li>
+          <li>Led efforts to decompose a monolithic REST service into targeted microservices while safely migrating production traffic.</li>
+        </ul>
+      </article>
+
+      <!-- Social Print Studio -->
+      <article class="job">
+        <div class="job__header">
+          <h3 class="job__company">Social Print Studio</h3>
+          <span class="job__dates">2016 – 2017</span>
+        </div>
+        <div class="job__role">Software Engineer</div>
+        <ul class="job__bullets">
+          <li>Owned and evolved the web version of a product customization app post-launch.</li>
+          <li>Developed frontend features in Elm.js and maintained supporting Node.js and TypeScript APIs.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- ─── EDUCATION ────────────────────────────── -->
+    <section class="section" aria-label="Education">
+      <h2 class="section__heading">Education</h2>
+      <div class="edu">
+        <div>
+          <div class="edu__school">Hack Reactor</div>
+          <div class="edu__detail">Advanced Software Engineering Immersive</div>
+        </div>
+        <span class="edu__dates">2016</span>
+      </div>
+      <div class="edu">
+        <div>
+          <div class="edu__school">University of California, Santa Barbara</div>
+          <div class="edu__detail">Bachelor of Arts in Physics</div>
+        </div>
+        <span class="edu__dates">2010 – 2014</span>
+      </div>
+    </section>
+
+    <!-- ─── FOOTER ───────────────────────────────── -->
+    <footer class="footer">
+      <p class="footer__text">
+        Built by Ben Patalano · <a href="Ben_Patalano_-_Senior_Software_Engineer_-_2025.pdf" download>Download Resume (PDF)</a>
+      </p>
+    </footer>
+
+  </div>
+</body>
+</html>
